@@ -1,7 +1,7 @@
 {
-  "name": "webpackPractice",
+  "name": "best-burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "With the following features:",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,5 +26,13 @@
     "backbone": "^1.3.3",
     "jquery": "^2.2.3",
     "underscore": "^1.8.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanBuda11/best-burgers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DanBuda11/best-burgers/issues"
+  },
+  "homepage": "https://github.com/DanBuda11/best-burgers#readme"
 }
