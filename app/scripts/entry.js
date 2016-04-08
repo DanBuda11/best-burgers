@@ -1,7 +1,7 @@
 import Backbone from 'backbone';
 import './../styles/main.scss';
 import $ from 'jquery';
-import BurgerCollection from './collections/burgerCollection';
+import BurgerView from '../viewss/BurgerView';
 
 
 
@@ -16,3 +16,8 @@ var settings = {
 };
 			
 potato.fetch(settings);
+
+let newBurger = new BurgerView();
+newBurger.render();
+$('body').append(newBurger.$el);
+
