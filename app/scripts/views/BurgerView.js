@@ -1,10 +1,9 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
-// import BurgerModel from '../models/BurgerModel';
+import BurgerModel from '../models/BurgerModel';
 
 export default BackBone.View.extend({
-	tagName: '',
-	className: '',
+	className: 'burgerBox',
 	initialize: function(argument) {
 		this. = argument;
 		this.render();
