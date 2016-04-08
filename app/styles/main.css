@@ -106,13 +106,14 @@ body {
   border: 2px solid #f4f4f4; }
 
 .burger-picture {
-  content: url(https://sparkpeo.hs.llnwd.net/e4//nw/3/9/l391837837.jpg);
-  width: 16em;
-  float: left; }
+  float: left;
+  width: 30%; }
+  .burger-picture img {
+    width: 100%; }
 
 .burger-info {
   float: left;
-  padding: 1em;
+  padding: 1em 1em 0 1em;
   overflow: hidden; }
 
 .burger-name {
@@ -120,7 +121,7 @@ body {
 
 .voting-and-likes {
   float: right;
-  padding: 2.5em 1em 1em 4em;
+  padding: 2.5em 1em 0em 4em;
   font-size: 1.3em; }
 
 /*# sourceMappingURL=main.css.map */
