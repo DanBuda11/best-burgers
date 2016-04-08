@@ -1,5 +1,5 @@
 body {
-  background: #efefef; }
+  /*background: $light-grey;*/ }
 
 /*********** GRID LAYOUT ***************/
 /*************** ROW AND COL FOR GRID ***********/
@@ -102,7 +102,26 @@ body {
 /*************** BURGER DISPLAY ****************/
 .burger-container {
   height: 10em;
-  background-color: red;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #f4f4f4; }
+
+.burger-picture {
+  content: url(https://sparkpeo.hs.llnwd.net/e4//nw/3/9/l391837837.jpg);
+  width: 16em;
+  float: left; }
+
+.burger-info {
+  float: left;
+  padding: 1em;
+  overflow: hidden; }
+
+.burger-name {
+  float: left; }
+
+.voting-and-likes {
+  float: right;
+  padding: 2.5em 1em 1em 4em;
+  font-size: 1.3em; }
 
 /*# sourceMappingURL=main.css.map */
