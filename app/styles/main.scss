@@ -3,3 +3,30 @@
 body {
   background: $light-grey;
 }
+
+.burgerBox {
+	padding: 1em;
+	overflow: hidden;
+	background-color: #fff;
+	
+}
+
+.burgerPicBox {
+	height: 90%;
+	float: left;
+}
+
+.burgerInfo {
+	float: left;
+	margin-left: 1em;
+	vertical-align: middle;
+}
+
+.likesDiv {
+	height: 100%;
+	float: right;
+}
+
+.thumbPic {
+	height: 5em;
+}
