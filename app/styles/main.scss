@@ -92,12 +92,15 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
 /************** UNIVERSAL AND VARIABLES **********************/
 
+$PrimaryColor: #6161C2;
+
+$PrimaryFont: avenir;
+
 a{
 	color: black;
 	text-decoration: none;
+	font-family: $PrimaryFont;
 }
-
-$PrimaryColor: #6161C2;
 
 
 /*************** BURGER DISPLAY ****************/
@@ -122,6 +125,7 @@ $PrimaryColor: #6161C2;
 	float: left;
 	padding: 1em 1em 0 1em;
 	overflow: hidden;
+	font-family: $PrimaryFont;
 }
 
 .burger-name{
@@ -149,6 +153,7 @@ $PrimaryColor: #6161C2;
 	padding: 1.1em;
 	font-family: roboto;
 	float: left;
+	font-family: $PrimaryFont;
 }
 
 .login-button{
@@ -175,15 +180,35 @@ $PrimaryColor: #6161C2;
 
 .input-form-container{
 	margin: 0 auto;
-	text-align: center;
-	background-color: white;
+	text-align: left;
+	background-color: $PrimaryColor;
 }
 
 .input-form{
 	padding: 1em;
+
+	h2{
+		color: white;
+		font-family: $PrimaryFont;
+	}
+
+	h4{
+		font-family: $PrimaryFont;
+		color: white;
+	}
+}
+
+.input-bars{
+	padding: 1em 0em 1em 0em;
 }
 
 /**************** DISPLAY CONTAINER *************/
+
+.display-title{
+	color: white;
+	margin: 0 auto;
+	font-family: $PrimaryFont;
+}
 
 .display-container{
 	margin: 0 auto;

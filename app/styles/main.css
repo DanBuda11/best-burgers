@@ -102,7 +102,8 @@ body {
 /************** UNIVERSAL AND VARIABLES **********************/
 a {
   color: black;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: avenir; }
 
 /*************** BURGER DISPLAY ****************/
 .burger-container {
@@ -120,7 +121,8 @@ a {
 .burger-info {
   float: left;
   padding: 1em 1em 0 1em;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: avenir; }
 
 .burger-name {
   float: left; }
@@ -142,7 +144,8 @@ a {
   color: white;
   padding: 1.1em;
   font-family: roboto;
-  float: left; }
+  float: left;
+  font-family: avenir; }
 
 .login-button {
   width: 3em;
@@ -164,13 +167,27 @@ a {
 /**************** INPUT FORM ********************/
 .input-form-container {
   margin: 0 auto;
-  text-align: center;
-  background-color: white; }
+  text-align: left;
+  background-color: #6161C2; }
 
 .input-form {
   padding: 1em; }
+  .input-form h2 {
+    color: white;
+    font-family: avenir; }
+  .input-form h4 {
+    font-family: avenir;
+    color: white; }
+
+.input-bars {
+  padding: 1em 0em 1em 0em; }
 
 /**************** DISPLAY CONTAINER *************/
+.display-title {
+  color: white;
+  margin: 0 auto;
+  font-family: avenir; }
+
 .display-container {
   margin: 0 auto;
   background-color: white;
