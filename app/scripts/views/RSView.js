@@ -8,25 +8,25 @@ import BurgerCollection from './collections/burgerCollection';
 //let input = New NewBurgerView();
 
 const RecentlySubmittedView = Backbone.View.extend({
-	tagName: 
-	className: 
-	// events: {
-	// 	
-	// },
+	//tagName: 
+	className: submitted_burger
 	initialize: function() {
-		this.burger = burger;
+		this.title = ;
 		this.location = location;
 		this.desc = description
 		this.render();
 	},
 	render: function() {
 		const template = 
+			`<span>${this.title}</span>
+			<span>${this.location}</span>
+			<span>${this.description}<span>
 			`
-			`
-		this.$el.html(template);
+		this.$el.html(this.item);
+		$('.list').append(this.$el);
 	},
-	//
-		
+	
+		export default RecentlySubmittedView;
 		
 	}
 });
