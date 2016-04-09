@@ -36,7 +36,7 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 /***************************************/
 
 
-@media (min-width:600px){
+@media (min-width:700px){
   .col{
     margin-bottom: 0;
   }
@@ -90,27 +90,90 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
 }
 
+/************** UNIVERSAL AND VARIABLES **********************/
+
+$PrimaryColor: #5C6BC0;
+
+$SecondaryColor: #3F51B5;
+
+$ButtonColor: #FFEB3B;
+
+$PrimaryFont: avenir;
+
+a{
+	color: black;
+	text-decoration: none;
+	font-family: $PrimaryFont;
+}
+
+
 /*************** BURGER DISPLAY ****************/
 
 
 .burger-container{
-	margin: 0 auto;
+	margin: 0 1em 0 1em;
 	overflow: hidden;
 	border: 2px solid #f4f4f4;
+	background-color: white;
+
+	@media (min-width: 700px){
+		margin: 0 auto;
+	}
 }
 
 .burger-picture{
 	float: left;
-	width: 30%;
+	width: 25%;
 	img {
 		width: 100%;
+	}
+
+	@media (min-width: 700px){
+		width: 30%;
 	}
 }
 
 .burger-info{
-	float: left;
-	padding: 1em 1em 0 1em;
+	padding: 0.4em 0 0 0.2em;
 	overflow: hidden;
+
+	@media (min-width: 1100px){
+		padding: 0.5em 1em 0 1em;
+		float: left;
+	}
+}
+
+.the-burger-name{
+	font-size: 1em;
+	font-family: $PrimaryFont;
+	padding: 0em 0em 0.5em 0em;
+
+	@media (min-width: 700px){
+		font-size: 1.1em;
+		padding: 0.5em 0em 0.5em 0.5em;
+	}
+
+	@media (min-width: 1100px){
+		font-size: 1.4em;
+		padding: 1em 0em 1em 0em;
+	}
+
+}
+
+.the-place-name{
+	font-size: 0.9em;
+	font-family: $PrimaryFont;
+
+	@media (min-width: 700px){
+		font-size: 1.1em;
+		padding: 0em 0em 0em 0.5em;
+	}
+
+	@media (min-width: 1100px){
+		font-size: 1.3em;
+		padding: 0em 0em 1em 0em;
+	}
+
 }
 
 .burger-name{
@@ -118,12 +181,172 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 }
 
 .voting-and-likes{
+	font-family: $PrimaryFont;
+	padding: 1em 0em 0em 0em;
+	font-size: 1em;
+
+	@media (min-width: 700px){
+		float: right;
+		padding: 1.5em 1.5em 0em 1em;
+	}
+
+	@media (min-width: 1100px){
+		font-size: 1.3em;
+		padding: 2.5em 1em 0em 4em;
+	}
+}
+
+.chevron-switch{
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/***************** NAV AND FOOTER **********************/
+
+.nav-footer-bar{
+	background-color: $SecondaryColor;
+	height: 5em;
+	overflow: hidden;
+}
+
+.logo-icon{
+	width: 5em;
+	font-size: 1.5em;
+	color: white;
+	padding: 1.1em;
+	float: left;
+	font-family: $PrimaryFont;
+}
+
+.login-button{
+	height: 1em;
+	background-color: $ButtonColor;
 	float: right;
-	padding: 2.5em 1em 0em 4em;
-	font-size: 1.3em;
+	margin: 1em 1em 0em 0em;
+	padding: 0.6em 1em 1em 1em;
+	font-family: $PrimaryFont;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+/**************** TITLE AND SUGGESTION BUTTON *******************/
+
+.title-button-container{
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.bba-title{
+	float: left;
+	font-family: $PrimaryFont;
+	color: white;
+	font-size: 1.2em;
+	padding: 0.5em 0em 0em 0em;
+	margin-left: 1em;
+
+	@media (min-width: 700px){
+		margin-left: 1em;
+		font-size: 1.5em;
+	}
+
+	@media (min-width: 1100px){
+		font-size: 2.1em;
+	}
+}
+
+.suggestion-button{
+	float: right;
+	background-color: $ButtonColor;
+	font-family: $PrimaryFont;
+	padding: 1em;
+	margin-right: 1em;
+
+	@media (min-width: 700px){
+		margin-right: 0;
+	
+	}
 }
 
 
+
+
+/**************** BACKGROUND ***************/
+
+.main-background{
+	margin: 0em 0em 3em 0em;
+}
+
+.body-background{
+	margin: 0 1em 0 1em;
+	background-color: $PrimaryColor;
+	padding: 1em 0em 2em 0em;
+
+	@media (min-width: 700px){
+		margin: 0 auto;
+	}
+}
+
+/**************** INPUT FORM ********************/
+
+.input-form-container{
+	margin: 0 auto;
+	text-align: left;
+	background-color: $PrimaryColor;
+}
+
+.form-title{
+	font-size: 1.3em;
+	color: white;
+	font-weight: normal;
+}
+
+.input-form{
+	padding: 1em;
+}
+
+.input-bars{
+	font-family: $PrimaryFont;
+	font-size: 1.1em;
+	padding: 1em 0em 1em 0em;
+
+	@media (min-width: 700px){
+		font-size: 1.2em;
+	}
+
+	@media (min-width: 1100px){
+		font-size: 1.3em;
+	}
+}
+
+/**************** DISPLAY CONTAINER *************/
+
+.display-title{
+	margin: 0 0 0 1em;
+	color: white;
+	font-family: $PrimaryFont;
+	font-weight: normal;
+	font-size: 1.3em;
+
+	@media (min-width: 700px){
+		margin: 0 auto;
+	}
+}
+
+.display-container{
+	width: 90%;
+	background-color: white;
+	height: 10em;
+	margin: 0 auto;
+
+	@media (min-width: 700px){
+		width: 65%;
+	}
+
+	@media (min-width: 1100px){
+		width: 55%;
+	}
+
+}
 
 
 

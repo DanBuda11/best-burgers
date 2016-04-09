@@ -12,7 +12,7 @@ body {
   margin-bottom: 1em; }
 
 /***************************************/
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .col {
     margin-bottom: 0; }
 
@@ -99,29 +99,196 @@ body {
     margin-right: 2%; }
     .col-12:last-child {
       margin-right: auto; } }
+/************** UNIVERSAL AND VARIABLES **********************/
+a {
+  color: black;
+  text-decoration: none;
+  font-family: avenir; }
+
 /*************** BURGER DISPLAY ****************/
 .burger-container {
-  margin: 0 auto;
+  margin: 0 1em 0 1em;
   overflow: hidden;
-  border: 2px solid #f4f4f4; }
+  border: 2px solid #f4f4f4;
+  background-color: white; }
+  @media (min-width: 700px) {
+    .burger-container {
+      margin: 0 auto; } }
 
 .burger-picture {
   float: left;
-  width: 30%; }
+  width: 25%; }
   .burger-picture img {
     width: 100%; }
+  @media (min-width: 700px) {
+    .burger-picture {
+      width: 30%; } }
 
 .burger-info {
-  float: left;
-  padding: 1em 1em 0 1em;
+  padding: 0.4em 0 0 0.2em;
   overflow: hidden; }
+  @media (min-width: 1100px) {
+    .burger-info {
+      padding: 0.5em 1em 0 1em;
+      float: left; } }
+
+.the-burger-name {
+  font-size: 1em;
+  font-family: avenir;
+  padding: 0em 0em 0.5em 0em; }
+  @media (min-width: 700px) {
+    .the-burger-name {
+      font-size: 1.1em;
+      padding: 0.5em 0em 0.5em 0.5em; } }
+  @media (min-width: 1100px) {
+    .the-burger-name {
+      font-size: 1.4em;
+      padding: 1em 0em 1em 0em; } }
+
+.the-place-name {
+  font-size: 0.9em;
+  font-family: avenir; }
+  @media (min-width: 700px) {
+    .the-place-name {
+      font-size: 1.1em;
+      padding: 0em 0em 0em 0.5em; } }
+  @media (min-width: 1100px) {
+    .the-place-name {
+      font-size: 1.3em;
+      padding: 0em 0em 1em 0em; } }
 
 .burger-name {
   float: left; }
 
 .voting-and-likes {
+  font-family: avenir;
+  padding: 1em 0em 0em 0em;
+  font-size: 1em; }
+  @media (min-width: 700px) {
+    .voting-and-likes {
+      float: right;
+      padding: 1.5em 1.5em 0em 1em; } }
+  @media (min-width: 1100px) {
+    .voting-and-likes {
+      font-size: 1.3em;
+      padding: 2.5em 1em 0em 4em; } }
+
+.chevron-switch {
+  margin: 0 auto;
+  overflow: hidden; }
+
+/***************** NAV AND FOOTER **********************/
+.nav-footer-bar {
+  background-color: #3F51B5;
+  height: 5em;
+  overflow: hidden; }
+
+.logo-icon {
+  width: 5em;
+  font-size: 1.5em;
+  color: white;
+  padding: 1.1em;
+  float: left;
+  font-family: avenir; }
+
+.login-button {
+  height: 1em;
+  background-color: #FFEB3B;
   float: right;
-  padding: 2.5em 1em 0em 4em;
+  margin: 1em 1em 0em 0em;
+  padding: 0.6em 1em 1em 1em;
+  font-family: avenir;
+  font-size: 1.1em;
+  text-align: center; }
+
+/**************** TITLE AND SUGGESTION BUTTON *******************/
+.title-button-container {
+  margin: 0 auto;
+  overflow: hidden; }
+
+.bba-title {
+  float: left;
+  font-family: avenir;
+  color: white;
+  font-size: 1.2em;
+  padding: 0.5em 0em 0em 0em;
+  margin-left: 1em; }
+  @media (min-width: 700px) {
+    .bba-title {
+      margin-left: 1em;
+      font-size: 1.5em; } }
+  @media (min-width: 1100px) {
+    .bba-title {
+      font-size: 2.1em; } }
+
+.suggestion-button {
+  float: right;
+  background-color: #FFEB3B;
+  font-family: avenir;
+  padding: 1em;
+  margin-right: 1em; }
+  @media (min-width: 700px) {
+    .suggestion-button {
+      margin-right: 0; } }
+
+/**************** BACKGROUND ***************/
+.main-background {
+  margin: 0em 0em 3em 0em; }
+
+.body-background {
+  margin: 0 1em 0 1em;
+  background-color: #5C6BC0;
+  padding: 1em 0em 2em 0em; }
+  @media (min-width: 700px) {
+    .body-background {
+      margin: 0 auto; } }
+
+/**************** INPUT FORM ********************/
+.input-form-container {
+  margin: 0 auto;
+  text-align: left;
+  background-color: #5C6BC0; }
+
+.form-title {
+  font-size: 1.3em;
+  color: white;
+  font-weight: normal; }
+
+.input-form {
+  padding: 1em; }
+
+.input-bars {
+  font-family: avenir;
+  font-size: 1.1em;
+  padding: 1em 0em 1em 0em; }
+  @media (min-width: 700px) {
+    .input-bars {
+      font-size: 1.2em; } }
+  @media (min-width: 1100px) {
+    .input-bars {
+      font-size: 1.3em; } }
+
+/**************** DISPLAY CONTAINER *************/
+.display-title {
+  margin: 0 0 0 1em;
+  color: white;
+  font-family: avenir;
+  font-weight: normal;
   font-size: 1.3em; }
+  @media (min-width: 700px) {
+    .display-title {
+      margin: 0 auto; } }
+
+.display-container {
+  width: 90%;
+  background-color: white;
+  height: 10em;
+  margin: 0 auto; }
+  @media (min-width: 700px) {
+    .display-container {
+      width: 65%; } }
+  @media (min-width: 1100px) {
+    .display-container {
+      width: 55%; } }
 
 /*# sourceMappingURL=main.css.map */
