@@ -1,38 +1,20 @@
-import Backbone from 'backbone';
 import './../styles/main.scss';
 import $ from 'jquery';
-import BurgerView from './views/BurgerView.js';
+import Backbone from 'backbone';
+import BurgerView from './views/BurgerView';
+import BurgerCollection from './collections/BurgerCollection';
+import BurgersView from './views/BurgersView';
 
-let newBurger = new BurgerView();
-newBurger.render();
-$('body').append(newBurger.$el);
-
-
-
-
-
-// change all the below to match burgers not polarBears
+let burgers = new BurgerCollection;
 
 var settings = {
 	success: function() {
-		polarBears.forEach((image) => {
-			console.log(image.get('caption'));
-			let newPolarBear = new ImageView(image.get('caption'), image.get('src'));
-			$('.image-list').append(newPolarBearView.$el);
+		burgers.forEach((arg) => {
+			console.log(arg.get('title'));
+			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'));
+			$('.burgerBox').append(newBurger.$el);
 		});
 	}
 };
 
-polarBears.fetch(settings);
-
-$('.image-form').on('submit', (e) => {
-	e.preventDefault();
-	let new PolarBear = {
-		src: $('.src').val(),
-		caption: $('.caption').val()
-	};
-	polarBears.create(newPolarBear);
-});
-
-
-let polarBears = new ImageCollection();
+burgers.fetch(settings);

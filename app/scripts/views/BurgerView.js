@@ -1,29 +1,36 @@
-import Backbone from 'backbone';
 import $ from 'jquery';
-import BurgerModel from '../models/burgerModel';
-import BurgerCollection from '../collections/burgerCollection';
+import Backbone from 'backbone';
+import BurgersView from './BurgersView';
+import BurgerCollection from '../collections/BurgerCollection';
+import BurgerModel from '../models/BurgerModel';
 
 export default Backbone.View.extend({
-	className: 'burgerBox',
-	initialize: function(newBurger) {
-		this.item = newBurger;
+	initialize: function(title, desc, pic, loc, votes) {
+		this.title = title;
+		this.desc = desc;
+		this.pic = pic;
+		this.loc = loc;
+		this.votes = votes;
 		this.render();
 	},
-	render: function() {
-		const template = `
-			<div class="col col-8 burger-container">
-				<div class="burger-picture">
-				</div>
-				<div class="burger-info">
-					<div class="burger-name">
-						<h2>The American Burger</h2>
-						<h3>Uncle Willy's Tavern</h3>
-					</div>	
-					<div class="voting-and-likes">
-						<i class="fa fa-thumbs-up"></i>(# of likes)
-					</div>
-				</div>
-			</div>`;
-		this.$el.html(template);
-	}
+    render: function() {
+  	const template = `
+  		<div class="col col-8 burger-container">
+  			<div class="burger-picture">
+  				<img src="${this.pic}">
+  			</div>
+  			<div class="burger-info">
+  				<div class="burger-name">
+  					<h2>${this.title}</h2>
+  					<h3>${this.loc}</h3>
+  				</div>
+  				<div class="voting-and-likes">
+  					<i class="fa fa-thumbs-up"></i>
+  					(${this.votes} likes)
+  				</div>
+  			</div>
+  		</div>`;
+    this.$el.html(template);
+    return this;
+  }
 });
