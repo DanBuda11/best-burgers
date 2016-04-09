@@ -22,8 +22,8 @@ export default Backbone.View.extend({
   			</div>
   			<div class="burger-info">
   				<div class="burger-name">
-  					<h2>${this.title}</h2>
-  					<h3>${this.loc}</h3>
+  					<div class= "the-burger-name">${this.title}</div>
+  					<div class= "the-place-name">${this.loc}</div>
   				</div>
   				<div class="voting-and-likes">
   					<i class="fa fa-thumbs-up"></i>

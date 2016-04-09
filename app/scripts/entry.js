@@ -23,7 +23,7 @@ burgers.fetch(settings);
 
 
 
-$( ".addBurger" ).click(function () {
+$( ".burgersubmit" ).click(function () {
   if ( $( ".input-form" ).is( ":hidden" ) ) {
     $( ".input-form" ).slideDown( "slow" );
   } else {
