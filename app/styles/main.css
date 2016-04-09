@@ -173,6 +173,10 @@ a {
       font-size: 1.3em;
       padding: 2.5em 1em 0em 4em; } }
 
+.chevron-switch {
+  margin: 0 auto;
+  overflow: hidden; }
+
 /***************** NAV AND FOOTER **********************/
 .nav-footer-bar {
   background-color: #3F51B5;
