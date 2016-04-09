@@ -1,11 +1,26 @@
 import './../styles/main.scss';
 import $ from 'jquery';
-//import BurgerView from './views/burgerview.js';
-//import RecentlySubmittedView from './views/rsview.js';
-import BurgerCollection from "./collections/burgerCollection.js";
 import Backbone from 'backbone';
+import BurgerView from './views/BurgerView';
+import BurgerCollection from './collections/BurgerCollection';
 
-console.log('start');
+let burgers = new BurgerCollection;
+
+var settings = {
+	success: function() {
+		burgers.forEach((arg) => {
+			console.log(arg.get('title'));
+			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'));
+			$('.burgerBox').append(newBurger.$el);
+		});
+	}
+};
+
+burgers.fetch(settings);
+
+
+
+
 
 
 $( ".addBurger" ).click(function () {
@@ -95,6 +110,7 @@ function clear() {
 	$('.burgerDesc').val("");
 	$('.burgerPic').val("");
 };
+
 
 
 
