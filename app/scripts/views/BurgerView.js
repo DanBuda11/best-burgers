@@ -2,7 +2,7 @@ import Backbone from 'backbone';
 import $ from 'jquery';
 import BurgerModel from '../models/BurgerModel';
 
-export default BackBone.View.extend({
+const BurgerView = BackBone.View.extend({
 	className: 'burgerBox',
 	initialize: function(argument) {
 		this. = argument;
@@ -10,7 +10,8 @@ export default BackBone.View.extend({
 	},
 	render: function() {
 		const template = `
-			<div></div>`;
+			<div>potato</div>`;
 			this.$el.html(template);
 	}
 });
+export default BurgerView;

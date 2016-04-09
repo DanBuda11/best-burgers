@@ -1,9 +1,10 @@
-import Backbone from 'backbone';
 import './../styles/main.scss';
 import $ from 'jquery';
-//import BurgerView from './views/BurgerView.js';
-// import RecentlySubmittedView from './../views/RSView.js';
-// import BurgerCollection from "./collections/burgerCollection.js"
+//import BurgerView from './views/burgerview.js';
+//import RecentlySubmittedView from './views/rsview.js';
+import BurgerCollection from "./collections/burgerCollection.js";
+import Backbone from 'backbone';
+
 console.log('start');
 
 
@@ -15,42 +16,85 @@ $( ".addBurger" ).click(function () {
   }
 });
 
-// let burgerList = new BurgerCollection();
+const RecentlySubmittedView = Backbone.View.extend({
+	//tagName: 
+	//className: submitted_burger,
+	initialize: function(title, location, description) {
+		this.title = title;
+		this.location = location;
+		this.desc = description;
+		this.render();
+	},
+	render: function() {
+		const template = 
+		this.$el.html(this.item);
+		$('body').append(this.$el);
+	}
+	
+});
+
+let burgerList = new BurgerCollection();
 // var settings = {
 // 	success: function() {
-// 		burgerList.forEach((item) => {
+// 		burgerList.forEach((posts) => {
 // 			let newHamburgerView = new RecentlySubmittedView(
-// 				item.get('title'),
-// 				item.get('location'),
-// 				item.get('description'),
-// 				item.get('pic')
+// 				posts.get('title')
+// 				// burgerList.get('location'),
+// 				// burgerList.get('description'),
+// 				// burgerList.get('pic')
 // 			);
-// 			$('body').append(newHambergerView.el);
+// 			$('body').append(newHamburgerView.el);
 // 		});
 // 	}
 // };
-// burgerList.fetch(settings);
+//burgerList.create(settings);
 
 // $(".input-form").on('submit', (e) => {
-// 	e.preventDefault;
-// 	console.log('submit')
+// 	e.preventDefault();
+// 	console.log('submit');
 // 		let submitBurger = {
 // 		title: $('.burgerTitle').val(),
-// 		location: $('.burgerLoc').val(),
-// 		description: $('.burgerDesc').val(),
-// 		pic: $('.burgerPic').val()
+// 		// location: $('.burgerLoc').val(),
+// 		// description: $('.burgerDesc').val(),
+// 		// pic: $('.burgerPic').val()
 // 	};
+// 	console.log(submitBurger);
+// 	console.log(burgerList.title);
+
 // 	burgerList.create(submitBurger);
-// 	let newBurger = new BurgerView(
-// 		newBurger.location,
-// 		newBurger.description,
-// 		newBurger.pic
+
+// 	let newBurger = new RecentlySubmittedView(
+// 		burgerList.title
+// 		// burgerList.location,
+// 		// newBurger.description,
+// 		// newBurger.pic
 // 	);
-// 	console.log($('.burgerPic').val());
-// 	$('body').append(newBurger.el);
+// 	console.log(burgerList);
+// 	$('.input-form').append(newBurger.$el);
 
 // });
 
+$(".input-form" ).submit( (e) => {
+		e.preventDefault();
+		let title = $(".burgerTitle").val();
+		let location = $('.burgerLoc').val();
+		let desc = $('.burgerDesc').val();
+		let pic = $('.burgerPic').val();
+        $.post( "https://bba-app.herokuapp.com/api/posts", 
+        	{post: {title: title , description: desc, location: location, pic: pic} });
+        let newBurger = new RecentlySubmittedView(title, location, desc);
+        $('.input-form').append(newBurger.$el);
+        clear();
+
+});
+
+
+function clear() {
+	$(".burgerTitle").val("");
+	$('.burgerLoc').val("");
+	$('.burgerDesc').val("");
+	$('.burgerPic').val("");
+};
 
 
 
@@ -58,26 +102,4 @@ $( ".addBurger" ).click(function () {
 
 
 
-
-
-
-
-
-
-
-// let potato = new BurgerCollection();
-// var settings = {
-// 	success: function() {
-// 		potato.forEach((test) => {
-// 			console.log(test.get('title'));
-
-// 		})
-// 	}
-// };
-			
-// potato.fetch(settings);
-
-// let newBurger = new BurgerView();
-// newBurger.render();
-// $('body').append(newBurger.$el);
 
