@@ -1,16 +1,36 @@
-import Backbone from 'backbone';
 import $ from 'jquery';
+import Backbone from 'backbone';
+import BurgersView from './BurgersView';
+import BurgerCollection from '../collections/BurgerCollection';
 import BurgerModel from '../models/BurgerModel';
 
-export default BackBone.View.extend({
-	className: 'burgerBox',
-	initialize: function(argument) {
-		this. = argument;
+export default Backbone.View.extend({
+	initialize: function(title, desc, pic, loc, votes) {
+		this.title = title;
+		this.desc = desc;
+		this.pic = pic;
+		this.loc = loc;
+		this.votes = votes;
 		this.render();
 	},
-	render: function() {
-		const template = `
-			<div></div>`;
-			this.$el.html(template);
-	}
+    render: function() {
+  	const template = `
+  		<div class="col col-8 burger-container">
+  			<div class="burger-picture">
+  				<img src="${this.pic}">
+  			</div>
+  			<div class="burger-info">
+  				<div class="burger-name">
+  					<h2>${this.title}</h2>
+  					<h3>${this.loc}</h3>
+  				</div>
+  				<div class="voting-and-likes">
+  					<i class="fa fa-thumbs-up"></i>
+  					(${this.votes} likes)
+  				</div>
+  			</div>
+  		</div>`;
+    this.$el.html(template);
+    return this;
+  }
 });
