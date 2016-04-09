@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="app/styles/main.css"> 
+    <link rel="stylesheet" type="text/css" href="app/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="app/styles/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Best Burger in Austin</title>
-  </head>
-  <body>
-		<form class= "input-form">
-		<h2
-		>Tell us about a burger you like</h2>
-		<h4 class = "input-prompt">What's it called?</h4>
-		<input type = "text" placeholder="Super Burger" class = "burgerTitle"/>
-		<h4 class = "input-prompt">Where did you get it?</h4>
-		<input type = "text" placeholder="Burger Joint" class = "burgerLoc"/>
-		<h4 class = "input-prompt">What makes it great?</h4>
-		<input type = "text" placeholder="super juicy" class = "burgerDesc"/>
-		<h4 class = "input-prompt">Got a pic?</h4>
-		<input type = "url" placeholder="http://media.foodnetwork.ca/files/2014/10/cheese-curds.jpg" class = "burgerPic"/>
-		<button type = "submit" class = "burger-submit"></button>
+</head>
 
-		</form>
-		<div class="row">
-			<div class="col col-12">
-				<div class="row">
-					<div class="col col-8 burger-container">
-						
-						<div class="burger-picture">
-							<img src="https://sparkpeo.hs.llnwd.net/e4//nw/3/9/l391837837.jpg">
-						</div>
-						
-						<div class="burger-info">
+<body>
+    
 
-							<div class="burger-name">
-								<h2>The American Burger</h2>
-								<h3>Uncle Willy's Tavern</h3>
-							</div>	
+    <nav class="col-col-12 nav-bar">
+    	<div class="logo-icon">BBA</div>
+    	<a href="#">
+    		<div class="login-button">Login</div>
+    	</a>	
+    </nav>
+    
 
-							<div class="voting-and-likes">
-								<i class="fa fa-thumbs-up"></i>
-								(# of likes)
-							</div>
+    
+    
 
-						</div>
+    <div class="row">
+        <div class="col col-12">
+            
+			<div class="row">
+				<div class="col col-11 body-background">
 
-					
-					</div>
-				</div>
-			</div>
-		</div>
 
-  </body>
+		            <div class="row">
+		                <div class="col col-8 burger-container">
+		                    <div class="burger-picture">
+		                        <img src="https://sparkpeo.hs.llnwd.net/e4//nw/3/9/l391837837.jpg">
+		                    </div>
+		                    <div class="burger-info">
+		                        <div class="burger-name">
+		                            <h2>The American Burger</h2>
+		                            <h3>Uncle Willy's Tavern</h3>
+		                        </div>
+		                        <div class="voting-and-likes">
+		                            <i class="fa fa-thumbs-up"></i> (# of likes)
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+
+
+		           <div class="row">
+		           	<div class="col col-7 input-form-container">
+
+		            <form class="input-form">
+				        <h2>Tell us about a burger you like</h2>
+				       <h4 class="input-prompt">Got a pic?</h4>
+				        <input type="text" placeholder="Super Burger" class="burgerTitle" />
+				       <h4 class="input-prompt">Got a pic?</h4>
+				        <input type="text" placeholder="Burger Joint" class="burgerLoc" />
+				        <h4 class="input-prompt">Got a pic?</h4>
+				        <input type="text" placeholder="super juicy" class="burgerDesc" />
+				        <h4 class="input-prompt">Got a pic?</h4>
+				        <input type="url" placeholder="http://media.foodnetwork.ca/files/2014/10/cheese-curds.jpg" class="burgerPic" />
+				        <button type="submit" class="burger-submit"></button>
+    				</form>
+
+    				</div>
+    				</div>	
+
+		     	</div><!-- body-background -->
+		     </div>       
+        
+
+        </div><!-- col-12 -->
+    </div>
+</body>
+
 </html>
