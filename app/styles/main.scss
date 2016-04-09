@@ -92,7 +92,11 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
 /************** UNIVERSAL AND VARIABLES **********************/
 
-$PrimaryColor: #6161C2;
+$PrimaryColor: #5C6BC0;
+
+$SecondaryColor: #3F51B5;
+
+$ButtonColor: #FFEB3B;
 
 $PrimaryFont: avenir;
 
@@ -140,8 +144,8 @@ a{
 
 /***************** NAV BAR **********************/
 
-.nav-bar{
-	background-color: $PrimaryColor;
+.nav-footer-bar{
+	background-color: $SecondaryColor;
 	height: 5em;
 	overflow: hidden;
 }
@@ -159,21 +163,50 @@ a{
 .login-button{
 	width: 3em;
 	height: 1em;
-	background-color: #FFEB3B;
+	background-color: $ButtonColor;
 	float: right;
 	margin: 1em 1em 0em 0em;
 	padding: 0.6em 1em 1em 1em;
-	font-family: roboto;
+	font-family: $PrimaryFont;
 	font-size: 1.1em;
 	text-align: center;
 }
 
-/**************** BODY BACKGROUND ***************/
+/**************** TITLE AND SUGGESTION BUTTON *******************/
+
+.title-button-container{
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.bba-title{
+	float: left;
+	font-family: $PrimaryFont;
+	color: white;
+	font-size: 2.1em;
+	padding: 0em 0em 0em 0em;
+}
+
+.suggestion-button{
+	float: right;
+	background-color: $ButtonColor;
+	font-family: $PrimaryFont;
+	padding: 1em;
+}
+
+
+
+
+/**************** BACKGROUND ***************/
+
+.main-background{
+	margin: 0em 0em 3em 0em;
+}
 
 .body-background{
 	margin: 0 auto;
 	background-color: $PrimaryColor;
-	padding: 1em 0em 1em 0em;
+	padding: 1em 0em 2em 0em;
 }
 
 /**************** INPUT FORM ********************/
@@ -184,18 +217,16 @@ a{
 	background-color: $PrimaryColor;
 }
 
+.form-title{
+	font-size: 1.1em;
+	color: white;
+}
+
 .input-form{
 	padding: 1em;
-
-	h2{
-		color: white;
-		font-family: $PrimaryFont;
-	}
-
-	h4{
-		font-family: $PrimaryFont;
-		color: white;
-	}
+	color: white;
+	font-family: $PrimaryFont;
+	font-size: 1.3em;
 }
 
 .input-bars{
@@ -208,6 +239,7 @@ a{
 	color: white;
 	margin: 0 auto;
 	font-family: $PrimaryFont;
+	font-weight: normal;
 }
 
 .display-container{

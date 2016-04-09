@@ -133,8 +133,8 @@ a {
   font-size: 1.3em; }
 
 /***************** NAV BAR **********************/
-.nav-bar {
-  background-color: #6161C2;
+.nav-footer-bar {
+  background-color: #3F51B5;
   height: 5em;
   overflow: hidden; }
 
@@ -154,30 +154,52 @@ a {
   float: right;
   margin: 1em 1em 0em 0em;
   padding: 0.6em 1em 1em 1em;
-  font-family: roboto;
+  font-family: avenir;
   font-size: 1.1em;
   text-align: center; }
 
-/**************** BODY BACKGROUND ***************/
+/**************** TITLE AND SUGGESTION BUTTON *******************/
+.title-button-container {
+  margin: 0 auto;
+  overflow: hidden; }
+
+.bba-title {
+  float: left;
+  font-family: avenir;
+  color: white;
+  font-size: 2.1em;
+  padding: 0em 0em 0em 0em; }
+
+.suggestion-button {
+  float: right;
+  background-color: #FFEB3B;
+  font-family: avenir;
+  padding: 1em; }
+
+/**************** BACKGROUND ***************/
+.main-background {
+  margin: 0em 0em 3em 0em; }
+
 .body-background {
   margin: 0 auto;
-  background-color: #6161C2;
-  padding: 1em 0em 1em 0em; }
+  background-color: #5C6BC0;
+  padding: 1em 0em 2em 0em; }
 
 /**************** INPUT FORM ********************/
 .input-form-container {
   margin: 0 auto;
   text-align: left;
-  background-color: #6161C2; }
+  background-color: #5C6BC0; }
+
+.form-title {
+  font-size: 1.1em;
+  color: white; }
 
 .input-form {
-  padding: 1em; }
-  .input-form h2 {
-    color: white;
-    font-family: avenir; }
-  .input-form h4 {
-    font-family: avenir;
-    color: white; }
+  padding: 1em;
+  color: white;
+  font-family: avenir;
+  font-size: 1.3em; }
 
 .input-bars {
   padding: 1em 0em 1em 0em; }
@@ -186,7 +208,8 @@ a {
 .display-title {
   color: white;
   margin: 0 auto;
-  font-family: avenir; }
+  font-family: avenir;
+  font-weight: normal; }
 
 .display-container {
   margin: 0 auto;
