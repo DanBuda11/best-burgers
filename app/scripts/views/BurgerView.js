@@ -4,6 +4,7 @@ import BurgersView from './BurgersView';
 import BurgerCollection from '../collections/BurgerCollection';
 import BurgerModel from '../models/BurgerModel';
 
+
 export default Backbone.View.extend({
 	initialize: function(title, desc, pic, loc, votes) {
 		this.title = title;
@@ -34,3 +35,4 @@ export default Backbone.View.extend({
     return this;
   }
 });
+

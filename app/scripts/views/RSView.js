@@ -9,7 +9,7 @@ import BurgerCollection from './collections/burgerCollection';
 
 const RecentlySubmittedView = Backbone.View.extend({
 	//tagName: 
-	className: submitted_burger
+	className: submitted_burger,
 	initialize: function() {
 		this.title = ;
 		this.location = location;
@@ -24,9 +24,8 @@ const RecentlySubmittedView = Backbone.View.extend({
 			`
 		this.$el.html(this.item);
 		$('.list').append(this.$el);
-	},
-	
-		export default RecentlySubmittedView;
-		
 	}
+	
 });
+
+export default RecentlySubmittedView;
