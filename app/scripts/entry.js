@@ -2,6 +2,7 @@ import './../styles/main.scss';
 import $ from 'jquery';
 import Backbone from 'backbone';
 import BurgerView from './views/BurgerView';
+import SearchView from './views/searchView'
 import BurgerCollection from './collections/burgerCollection';
 
 let burgers = new BurgerCollection;
@@ -9,7 +10,6 @@ let burgers = new BurgerCollection;
 var settings = {
 	success: function() {
 		burgers.forEach((arg) => {
-			//console.log(arg.get('title'));
 			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'), arg.get('id'));
 			$('.burgerBox').append(newBurger.$el);
 		});
@@ -71,8 +71,12 @@ function clear() {
 
 $(".search-form").submit( (e) => {
 	e.preventDefault;
-	let item = $(".search-input").val();
-	console.log($(".search-input").val());
+	var item = $(".search-input").val();
+	$.get(`https://bba-app.herokuapp.com/api/posts/?search= ${item}`);
+	let searchResultsView = new SearchView(item.get('title'), item.get('description'), item.get('pic'), item.get('location'), item.get('votes_count'), item.get('id'));
+	return this;
+
+
 // 	let found = burgerList.find(function(item) {
 // 		 let foundBurgerView = new searchView(title, desc, pic, loc);
 		
