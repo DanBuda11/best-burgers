@@ -19,7 +19,9 @@ var settings = {
 burgers.fetch(settings);
 
 
-$( ".suggestion-button" ).click(function () {
+
+$( "..suggestion-button" ).click(function () {
+
   if ( $( ".input-form" ).is( ":hidden" ) ) {
     $( ".input-form" ).slideDown( "slow" );
   } else {
@@ -43,7 +45,6 @@ const RecentlySubmittedView = Backbone.View.extend({
 		$('.display-container').append(template);
 		return this;
 	}
-	
 });
 
 let burgerList = new BurgerCollection();
@@ -66,6 +67,7 @@ function clear() {
 	$('.burgerLoc').val("");
 	$('.burgerDesc').val("");
 	$('.burgerPic').val("");
+
 };
 
 $(".fa fa-thumbs-up").click( (e) => {
@@ -75,6 +77,7 @@ $(".fa fa-thumbs-up").click( (e) => {
 	$put(`/api/posts/:${this.id}/vote`);
 	//$.put("", {post: {title: title, }})
 });
+
 
 
 
