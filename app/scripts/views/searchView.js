@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-import BurgerCollection from '../collections/burgerCollection';
-import BurgerModel from '../models/burgerModel';
+import BurgersView from './BurgersView';
+import BurgerCollection from '../collections/BurgerCollection';
+import BurgerModel from '../models/BurgerModel';
 
 export default Backbone.View.extend({
-	events: {
-    "click .voting-and-likes": "countVotes"
-  },
+	//events: {},
+
   initialize: function(title, desc, pic, loc, votes, id) {
 		this.title = title;
 		this.desc = desc;
@@ -27,6 +27,8 @@ export default Backbone.View.extend({
   					<div class= "the-burger-name">${this.title}</div>
   					<div class= "the-place-name">${this.loc}</div>
   				</div>
+          <div class= "the-place-name">${this.desc}</div>
+          </div>
   				<div class="voting-and-likes">
   					<i class="fa fa-thumbs-up"></i>
   					(${this.votes} likes)
@@ -35,13 +37,7 @@ export default Backbone.View.extend({
   		</div>`;
     this.$el.html(template);
     return this;
-  },
-  countVotes: function() {
-     let votes = this.votes++;
-     $.post(`https://bba-app.herokuapp.com/api/posts/${this.id}/vote`);
-      this.render(votes);
-      return this;
-   }
+  }
 });
   
   

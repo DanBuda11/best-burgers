@@ -2,6 +2,7 @@ import './../styles/main.scss';
 import $ from 'jquery';
 import Backbone from 'backbone';
 import BurgerView from './views/BurgerView';
+import SearchView from './views/searchView'
 import BurgerCollection from './collections/burgerCollection';
 
 let burgers = new BurgerCollection;
@@ -9,7 +10,7 @@ let burgers = new BurgerCollection;
 var settings = {
 	success: function() {
 		burgers.forEach((arg) => {
-			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'));
+		let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'), arg.get('id'));
 			$('.burgerBox').append(newBurger.$el);
 		});
 	}
@@ -18,7 +19,6 @@ var settings = {
 burgers.fetch(settings);
 
 $( ".suggestion-button" ).click(function () {
-
   if ( $( ".input-form" ).is( ":hidden" ) ) {
     $( ".input-form" ).slideDown( "slow" );
   } else {
@@ -64,7 +64,6 @@ function clear() {
 	$('.burgerLoc').val("");
 	$('.burgerDesc').val("");
 	$('.burgerPic').val("");
-
 };
 
 $(".fa-thumbs-up").click( (e) => {
@@ -74,3 +73,25 @@ $(".fa-thumbs-up").click( (e) => {
 	$put(`/api/posts/:${this.id}/vote`);
 	//$.put("", {post: {title: title, }})
 });
+
+$(".search-form").submit( (e) => {
+	e.preventDefault;
+	var item = $(".search-input").val();
+	$.get(`https://bba-app.herokuapp.com/api/posts/?search= ${item}`);
+	let searchResultsView = new SearchView(item.get('title'), item.get('description'), item.get('pic'), item.get('location'), item.get('votes_count'), item.get('id'));
+	return this;
+
+
+// 	let found = burgerList.find(function(item) {
+// 		 let foundBurgerView = new searchView(title, desc, pic, loc);
+		
+// 			$(".error-container").html("Sorry, we don't have your burger")
+// 		}
+// 	})
+	
+
+// })
+
+// var found = myCollection.find(function(item){
+//         return Number(item.get('tranId')) === tranId;
+ });
