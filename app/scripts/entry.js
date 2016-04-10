@@ -10,15 +10,13 @@ let burgers = new BurgerCollection;
 var settings = {
 	success: function() {
 		burgers.forEach((arg) => {
-			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'), arg.get('id'));
+		let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'), arg.get('id'));
 			$('.burgerBox').append(newBurger.$el);
 		});
 	}
 };
 
 burgers.fetch(settings);
-
-
 
 $( ".suggestion-button" ).click(function () {
   if ( $( ".input-form" ).is( ":hidden" ) ) {
@@ -66,8 +64,15 @@ function clear() {
 	$('.burgerLoc').val("");
 	$('.burgerDesc').val("");
 	$('.burgerPic').val("");
-
 };
+
+$(".fa-thumbs-up").click( (e) => {
+	let title = event.target.title;
+	let id = e.target.id;
+	console.log(id);
+	$put(`/api/posts/:${this.id}/vote`);
+	//$.put("", {post: {title: title, }})
+});
 
 $(".search-form").submit( (e) => {
 	e.preventDefault;
@@ -87,10 +92,3 @@ $(".search-form").submit( (e) => {
 
 
  });
-
-
-
-
-
-
-

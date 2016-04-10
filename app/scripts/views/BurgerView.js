@@ -1,8 +1,7 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-import BurgersView from './BurgersView';
-import BurgerCollection from '../collections/BurgerCollection';
-import BurgerModel from '../models/BurgerModel';
+import BurgerCollection from '../collections/burgerCollection';
+import BurgerModel from '../models/burgerModel';
 
 export default Backbone.View.extend({
 	events: {
