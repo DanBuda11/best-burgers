@@ -71,24 +71,21 @@ function clear() {
 
 $(".search-form").submit( (e) => {
 	e.preventDefault;
-	var item = $(".search-input").val();
-	$.get(`https://bba-app.herokuapp.com/api/posts/?search= ${item}`);
-	let searchResultsView = new SearchView(item.get('title'), item.get('description'), item.get('pic'), item.get('location'), item.get('votes_count'), item.get('id'));
+	const item = $(".search-input").val();
+	console.log(item);
+	// success: function () {
+	// 	let seachResult = new SearchView(`https://bba-app.herokuapp.com/api/posts?search=${item}`);
+	// 	$(".burger-container").html(seachResult.$el);
+	// 	},
+	// error: function() {
+
+	// 	$(".error-container").html("Sorry, we don't have your burger");
+	// }
+
+	
 	return this;
 
 
-// 	let found = burgerList.find(function(item) {
-// 		 let foundBurgerView = new searchView(title, desc, pic, loc);
-		
-// 			$(".error-container").html("Sorry, we don't have your burger")
-// 		}
-// 	})
-	
-
-// })
-
-// var found = myCollection.find(function(item){
-//         return Number(item.get('tranId')) === tranId;
  });
 
 
