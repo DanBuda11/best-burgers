@@ -6,5 +6,5 @@ import BurgersView from '../views/BurgersView';
 
 export default Backbone.Collection.extend({
   model: BurgerModel,
-  url: 'https://bba-app.herokuapp.com/api/posts'
+  url: 'https://bba-app.herokuapp.com/api/posts?page=2'
 });
