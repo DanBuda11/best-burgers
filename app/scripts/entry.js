@@ -9,7 +9,6 @@ let burgers = new BurgerCollection;
 var settings = {
 	success: function() {
 		burgers.forEach((arg) => {
-			console.log(arg.get('title'));
 			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'));
 			$('.burgerBox').append(newBurger.$el);
 		});
@@ -17,11 +16,6 @@ var settings = {
 };
 
 burgers.fetch(settings);
-
-
-
-
-
 
 $( ".burgersubmit" ).click(function () {
   if ( $( ".input-form" ).is( ":hidden" ) ) {
@@ -45,7 +39,6 @@ const RecentlySubmittedView = Backbone.View.extend({
 		this.$el.html(this.item);
 		$('body').append(this.$el);
 	}
-	
 });
 
 let burgerList = new BurgerCollection();
@@ -100,9 +93,7 @@ $(".input-form" ).submit( (e) => {
         let newBurger = new RecentlySubmittedView(title, location, desc);
         $('.input-form').append(newBurger.$el);
         clear();
-
 });
-
 
 function clear() {
 	$(".burgerTitle").val("");
@@ -110,12 +101,3 @@ function clear() {
 	$('.burgerDesc').val("");
 	$('.burgerPic').val("");
 };
-
-
-
-
-
-
-
-
-
