@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import BurgerView from '../views/BurgerView';
-import BurgerCollection from '../collections/BurgerCollection';
+import BurgerCollection from '../collections/burgerCollection';
 
 export default Backbone.Model.extend({
   defaults: {
@@ -15,6 +15,6 @@ export default Backbone.Model.extend({
     location: 'Luettgen, Raynor and Hayes',
     user_id: null
   },
-  urlRoot: 'https://bba-app.herokuapp.com/api/posts',
+  urlRoot: `https://bba-app.herokuapp.com/api/posts`,
   idAttribute: '_id'
 });
