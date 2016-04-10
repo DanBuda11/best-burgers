@@ -69,9 +69,23 @@ function clear() {
 
 };
 
+$(".search-form").submit( (e) => {
+	e.preventDefault;
+	let item = $(".search-input").val();
+	console.log($(".search-input").val());
+// 	let found = burgerList.find(function(item) {
+// 		 let foundBurgerView = new searchView(title, desc, pic, loc);
+		
+// 			$(".error-container").html("Sorry, we don't have your burger")
+// 		}
+// 	})
+	
 
+// })
 
-
+// var found = myCollection.find(function(item){
+//         return Number(item.get('tranId')) === tranId;
+ });
 
 
 
