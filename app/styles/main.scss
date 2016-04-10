@@ -94,9 +94,11 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
 $PrimaryColor: #5C6BC0;
 
-$SecondaryColor: #3F51B5;
+$SecondaryColor: #BC181D;
 
 $ButtonColor: #FFEB3B;
+
+$ButtonColorHover: #FDD835;
 
 $PrimaryFont: avenir;
 
@@ -115,6 +117,7 @@ a{
 	overflow: hidden;
 	border: 2px solid #f4f4f4;
 	background-color: white;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 
 	@media (min-width: 700px){
 		margin: 0 auto;
@@ -205,28 +208,43 @@ a{
 
 .nav-footer-bar{
 	background-color: $SecondaryColor;
-	height: 5em;
 	overflow: hidden;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .logo-icon{
-	width: 5em;
+	width: 3em;
 	font-size: 1.5em;
 	color: white;
-	padding: 1.1em;
+	padding: 0.4em;
 	float: left;
 	font-family: $PrimaryFont;
 }
 
+.icon-size{
+	width: 3.5em;
+}
+
 .login-button{
-	height: 1em;
 	background-color: $ButtonColor;
-	float: right;
-	margin: 1em 1em 0em 0em;
-	padding: 0.6em 1em 1em 1em;
+	margin: 1.5em 1em 0em 0em;
+	padding: 0.6em 0.5em 0.7em 0.5em;
 	font-family: $PrimaryFont;
-	font-size: 1.1em;
+	font-size: 1em;
 	text-align: center;
+	float: right;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+
+	@media (min-width: 700px){
+		margin: 1em 1em 0em 0em;
+		padding: 0.6em 1em 0.7em 1em;
+		font-size: 1.1em;
+	}
+}
+
+.login-button:hover{
+	background-color: $ButtonColorHover;
 }
 
 /**************** TITLE AND SUGGESTION BUTTON *******************/
@@ -240,7 +258,7 @@ a{
 	float: left;
 	font-family: $PrimaryFont;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 0.5em 0em 0em 0em;
 	margin-left: 1em;
 
@@ -258,16 +276,20 @@ a{
 	float: right;
 	background-color: $ButtonColor;
 	font-family: $PrimaryFont;
-	padding: 1em;
+	padding: 0.5em;
 	margin-right: 1em;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 
 	@media (min-width: 700px){
 		margin-right: 0;
+		padding: 1em;
 	
 	}
 }
 
-
+.suggestion-button:hover{
+	background-color: $ButtonColorHover;
+}
 
 
 /**************** BACKGROUND ***************/
@@ -279,7 +301,7 @@ a{
 .body-background{
 	margin: 0 1em 0 1em;
 	background-color: $PrimaryColor;
-	padding: 1em 0em 2em 0em;
+	padding: 1em 0em 3em 0em;
 
 	@media (min-width: 700px){
 		margin: 0 auto;
@@ -302,6 +324,7 @@ a{
 
 .input-form{
 	padding: 1em;
+	display: none;
 }
 
 .input-bars{
@@ -337,6 +360,7 @@ a{
 	background-color: white;
 	height: 10em;
 	margin: 0 auto;
+	font-family: $PrimaryFont;
 
 	@media (min-width: 700px){
 		width: 65%;
@@ -348,7 +372,17 @@ a{
 
 }
 
+/**************** FOOTER ***********************/
 
+
+.footer-info{
+	font-family: $PrimaryFont;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+	padding: 3em 0em 1em 0em;
+	margin: 0;
+}
 
 
 
