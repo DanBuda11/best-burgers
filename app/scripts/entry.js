@@ -10,7 +10,7 @@ var settings = {
 	success: function() {
 		burgers.forEach((arg) => {
 			//console.log(arg.get('title'));
-			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'));
+			let newBurger = new BurgerView(arg.get('title'), arg.get('description'), arg.get('pic'), arg.get('location'), arg.get('votes_count'), arg.get('id'));
 			$('.burgerBox').append(newBurger.$el);
 		});
 	}
@@ -20,8 +20,7 @@ burgers.fetch(settings);
 
 
 
-$( "..suggestion-button" ).click(function () {
-
+$( ".suggestion-button" ).click(function () {
   if ( $( ".input-form" ).is( ":hidden" ) ) {
     $( ".input-form" ).slideDown( "slow" );
   } else {
@@ -70,13 +69,6 @@ function clear() {
 
 };
 
-$(".fa fa-thumbs-up").click( (e) => {
-	let title = event.target.title;
-	let id = e.target.id;
-	console.log(id);
-	$put(`/api/posts/:${this.id}/vote`);
-	//$.put("", {post: {title: title, }})
-});
 
 
 

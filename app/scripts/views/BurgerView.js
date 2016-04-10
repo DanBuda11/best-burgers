@@ -5,12 +5,16 @@ import BurgerCollection from '../collections/BurgerCollection';
 import BurgerModel from '../models/BurgerModel';
 
 export default Backbone.View.extend({
-	initialize: function(title, desc, pic, loc, votes) {
+	events: {
+    "click .voting-and-likes": "countVotes"
+  },
+  initialize: function(title, desc, pic, loc, votes, id) {
 		this.title = title;
 		this.desc = desc;
 		this.pic = pic;
 		this.loc = loc;
 		this.votes = votes;
+    this.id = id;
 		this.render();
 	},
     render: function() {
@@ -32,5 +36,13 @@ export default Backbone.View.extend({
   		</div>`;
     this.$el.html(template);
     return this;
-  }
+  },
+  countVotes: function() {
+     let votes = this.votes++;
+     $.post(`https://bba-app.herokuapp.com/api/posts/${this.id}/vote`);
+      this.render(votes);
+      return this;
+   }
 });
+  
+  
