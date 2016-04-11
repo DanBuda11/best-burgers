@@ -18,6 +18,7 @@ var settings = {
 
 burgers.fetch(settings);
 
+
 $( ".suggestion-button" ).click(function () {
   if ( $( ".input-form" ).is( ":hidden" ) ) {
     $( ".input-form" ).slideDown( "slow" );
@@ -66,13 +67,7 @@ function clear() {
 	$('.burgerPic').val("");
 };
 
-$(".fa-thumbs-up").click( (e) => {
-	let title = event.target.title;
-	let id = e.target.id;
-	console.log(id);
-	$put(`/api/posts/:${this.id}/vote`);
-	//$.put("", {post: {title: title, }})
-});
+
 
 $(".search-form").submit( (e) => {
 	e.preventDefault;
@@ -92,3 +87,5 @@ $(".search-form").submit( (e) => {
 
 
  });
+
+
